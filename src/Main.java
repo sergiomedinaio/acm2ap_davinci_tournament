@@ -12,14 +12,12 @@ public class Main {
                 new Date(2022,8,29)
         );     // creamos partido
 
-        TeamSeason profesoresPOO = new TeamSeason();
-        TeamSeason estudiantesFC = new TeamSeason();
+        TeamSeason profesoresPOO = new TeamSeason("Profes POO");
+        TeamSeason estudiantesFC = new TeamSeason("Estudiantes FC");
+        TeamSeason recursantesFC = new TeamSeason("Recursantes FC");
+        
         profesoresPOO.setPosition(1);
         estudiantesFC.setPosition(0);
-
-        profesoresPOO.setName("Profes POO");
-        estudiantesFC.setName("Estudiantes FC");
-        // hay que terminar de definir los equipos
 
         primerParcial.setLocalTeam(profesoresPOO);
         primerParcial.setVisitantTeam(estudiantesFC);

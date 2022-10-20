@@ -4,6 +4,12 @@ public class TeamSeason extends Team {
     private int position;
     private ArrayList<Player> players;
 
+    TeamSeason() {
+    }
+
+    TeamSeason(String name) {
+        this.setName(name);
+    }
 
     public ArrayList<Player> getPlayers(){
         return this.players;
