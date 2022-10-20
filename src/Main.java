@@ -6,13 +6,11 @@ public class Main {
         String lugarDelParcial = new String("Aula 116, Da Vinci");
 
         Season torneoDaVinci = new Season();   //creamos torneo
-        Date fechaPosibleParcial = new Date(); //creamos fecha
 
-        fechaPosibleParcial.setYear(2022);
-        fechaPosibleParcial.setMonth(8);       //un numero menos
-        fechaPosibleParcial.setDate(29);
-
-        Match primerParcial = new Match(lugarDelParcial, fechaPosibleParcial);     // creamos partido
+        Match primerParcial = new Match(
+                lugarDelParcial,
+                new Date(2022,8,29)
+        );     // creamos partido
 
         TeamSeason profesoresPOO = new TeamSeason();
         TeamSeason estudiantesFC = new TeamSeason();
