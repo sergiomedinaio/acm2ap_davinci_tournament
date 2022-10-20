@@ -17,7 +17,8 @@ public class Main {
         TeamSeason recursantesFC = new TeamSeason("Recursantes FC");
 
         Player profeSergio = new Player("Sergio Medina", 1, "Goalkeeper");
-        
+        Player profeSuplente = new Player("Profe suplente", 3, "Defender");
+
         profesoresPOO.setPosition(1);
         estudiantesFC.setPosition(0);
 
