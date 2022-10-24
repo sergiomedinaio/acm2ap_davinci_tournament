@@ -34,6 +34,7 @@ public class Main {
         profesoresPOO.setPosition(1);
         estudiantesFC.setPosition(0);
 
+        System.out.println(primerParcial.generateMarker());
 
     }
 }
