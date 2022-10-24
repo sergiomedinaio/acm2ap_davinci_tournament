@@ -5,17 +5,20 @@ public class TeamSeason extends Team {
     private ArrayList<Player> players;
 
     TeamSeason() {
+        this.setPlayers(new ArrayList<Player>());
     }
 
     TeamSeason(String name) {
         this.setName(name);
+        this.setPlayers(new ArrayList<Player>());
     }
 
     public ArrayList<Player> getPlayers(){
         return this.players;
     }
     public void addPlayer(Player player){
-        //this.players;
+        this.players.add(player);
+        player.setTeam(this);
         return;
     }
 
@@ -28,4 +31,7 @@ public class TeamSeason extends Team {
         return;
     }
 
+    public void setPlayers(ArrayList<Player> players) {
+        this.players = players;
+    }
 }

@@ -4,6 +4,7 @@ public class Player {
     private int number;
     private int goalCounter;
     private int matchCounter;
+    private TeamSeason team;
 
     Player() {
         this.setMatchCounter(0);
@@ -67,5 +68,13 @@ public class Player {
 
     public String getPosition() {
         return position;
+    }
+
+    public TeamSeason getTeam() {
+        return team;
+    }
+
+    public void setTeam(TeamSeason team) {
+        this.team = team;
     }
 }

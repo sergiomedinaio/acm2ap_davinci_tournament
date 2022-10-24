@@ -19,6 +19,9 @@ public class Main {
         Player profeSergio = new Player("Sergio Medina", 1, "Goalkeeper");
         Player profeSuplente = new Player("Profe suplente", 3, "Defender");
 
+        profesoresPOO.addPlayer(profeSergio);
+        profesoresPOO.addPlayer(profeSuplente);
+
         profesoresPOO.setPosition(1);
         estudiantesFC.setPosition(0);
 
