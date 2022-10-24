@@ -16,11 +16,18 @@ public class Main {
         TeamSeason estudiantesFC = new TeamSeason("Estudiantes FC");
         TeamSeason recursantesFC = new TeamSeason("Recursantes FC");
 
-        Player profeSergio = new Player("Sergio Medina", 1, "Goalkeeper");
-        Player profeSuplente = new Player("Profe suplente", 3, "Defender");
+        profesoresPOO.addPlayer(new Player("Sergio Medina", 1, "Goalkeeper"));
+        profesoresPOO.addPlayer(new Player("Profe suplente", 3, "Defender"));
+        profesoresPOO.addPlayer(new Player("Profe pw1", 3, "Middle"));
+        profesoresPOO.addPlayer(new Player("Profe pw2", 3, "Defender"));
+        profesoresPOO.addPlayer(new Player("Profe ux", 3, "Defender"));
 
-        profesoresPOO.addPlayer(profeSergio);
-        profesoresPOO.addPlayer(profeSuplente);
+        estudiantesFC.addPlayer(new Player("Estudiante Poo", 1, "Goalkeeper"));
+        estudiantesFC.addPlayer(new Player("Estudiante suplente", 3, "Defender"));
+        estudiantesFC.addPlayer(new Player("Estudiante pw1", 3, "Middle"));
+        estudiantesFC.addPlayer(new Player("Estudiante pw2", 3, "Defender"));
+        estudiantesFC.addPlayer(new Player("Estudiante ux", 3, "Defender"));
+
 
         profesoresPOO.setPosition(1);
         estudiantesFC.setPosition(0);
