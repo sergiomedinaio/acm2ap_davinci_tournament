@@ -20,6 +20,15 @@ public class Match {
         this.setDate(date); //asigne fecha
     }
 
+    Match(String location, Date date, TeamSeason localTeam, TeamSeason visitantTeam) {
+        this.setMarkerLocal(0);
+        this.setMarkerVisitant(0);
+        this.setLocation(location);
+        this.setDate(date); //asigne fecha
+        this.setLocalTeam(localTeam);
+        this.setVisitantTeam(visitantTeam);
+    }
+
     public void setDate(Date newDate){
         this.date = newDate;
         return;
