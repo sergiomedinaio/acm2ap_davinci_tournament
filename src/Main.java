@@ -34,9 +34,9 @@ public class Main {
         profesoresPOO.setPosition(1);
         estudiantesFC.setPosition(0);
 
-        primerParcial.makeLocalGoal(profesoresPOO.getPlayers().get(0));
-        primerParcial.makeLocalGoal(profesoresPOO.getPlayers().get(0));
-        primerParcial.makeVisitantGoal(profesoresPOO.getPlayers().get(0));
+        primerParcial.makeLocalGoal(0);
+        primerParcial.makeLocalGoal(2);
+        primerParcial.makeVisitantGoal(1);
 
         System.out.println(primerParcial.generateMarker());
 
