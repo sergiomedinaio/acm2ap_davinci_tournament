@@ -6,27 +6,23 @@ public class Match {
     private TeamSeason localTeam;
     private TeamSeason visitantTeam;
     private String location;
-    private int markerLocal;
-    private int markerVisitant;
+    private MatchResult result;
 
     Match() {
         this.creation = new Date();
-        this.setMarkerLocal(0);
-        this.setMarkerVisitant(0);
+        this.result = new MatchResult();
     }
 
     Match(String location, Date date) {
         this.creation = new Date();
-        this.setMarkerLocal(0);
-        this.setMarkerVisitant(0);
+        this.result = new MatchResult();
         this.setLocation(location);
         this.setDate(date); //asigne fecha
     }
 
     Match(String location, Date date, TeamSeason localTeam, TeamSeason visitantTeam) {
         this.creation = new Date();
-        this.setMarkerLocal(0);
-        this.setMarkerVisitant(0);
+        this.result = new MatchResult();
         this.setLocation(location);
         this.setDate(date); //asigne fecha
         this.setLocalTeam(localTeam);
@@ -34,10 +30,9 @@ public class Match {
     }
 
     public String generateMarker() {
-        return String.format("%s (%d) - (%d) %s ",
+        return String.format("%s %s %s ",
             this.getLocalTeam().getName(),
-            this.getMarkerLocal(),
-            this.getMarkerVisitant(),
+            this.result.generateMarker(),
             this.getVisitantTeam().getName()
         );
     }
@@ -49,19 +44,15 @@ public class Match {
     }
 
     public void makeLocalGoal(int position) {
-        int marker = this.getMarkerLocal();
         Player player = this.localTeam.getPlayers().get(position);
-        marker++;
         this.makeGoal(this.localTeam, player);
-        this.setMarkerLocal(marker);
+        this.result.incrementMarkerLocal();
     }
 
     public void makeVisitantGoal(int position) {
-        int marker = this.getMarkerVisitant();
         Player player = this.visitantTeam.getPlayers().get(position);
-        marker++;
         this.makeGoal(this.visitantTeam, player);
-        this.setMarkerVisitant(marker);
+        this.result.incremgetMarkerVisitant();
     }
 
 
@@ -83,23 +74,6 @@ public class Match {
         return;
     }
 
-    public void setMarkerLocal(int markerLocal){
-        this.markerLocal=markerLocal;
-        return;
-    }
-
-    public int getMarkerLocal(){
-        return this.markerLocal;
-    }
-
-    public void setMarkerVisitant(int markerVisitant){
-        this.markerVisitant=markerVisitant;
-        return ;
-    }
-
-    public int getMarkerVisitant(){
-        return this.markerVisitant;
-    }
 
     public String getResult(){
         return "";
