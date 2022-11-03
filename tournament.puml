@@ -1,0 +1,88 @@
+@startuml
+class Main {
++ {static} void main(String[])
+}
+class TeamSeason {
+- int position
+- ArrayList<Player> players
+~ <<Create>> TeamSeason()
+~ <<Create>> TeamSeason(String)
++ ArrayList<Player> getPlayers()
++ void addPlayer(Player)
++ int getPosition()
++ void setPosition(int)
++ void setPlayers(ArrayList<Player>)
+}
+class Season {
+- ArrayList<Match> matchs
++ void addMatch(Match)
+}
+class Player {
+- String name
+- String position
+- int number
+- int goalCounter
+- int matchCounter
+- TeamSeason team
+~ <<Create>> Player()
+~ <<Create>> Player(String)
+~ <<Create>> Player(String,int,String)
++ void setName(String)
++ String getName()
++ void setPosition(String)
++ int getGoalCounter()
++ void setGoalCounter(int)
++ int getMatchCounter()
++ void setMatchCounter(int)
++ int getNumber()
++ void setNumber(int)
++ String getPosition()
++ TeamSeason getTeam()
++ void setTeam(TeamSeason)
+}
+class Match {
+- Date creation
+- Date date
+- TeamSeason localTeam
+- TeamSeason visitantTeam
+- String location
+- int markerLocal
+- int markerVisitant
+~ <<Create>> Match()
+~ <<Create>> Match(String,Date)
+~ <<Create>> Match(String,Date,TeamSeason,TeamSeason)
++ String generateMarker()
+- void makeGoal(TeamSeason,Player)
++ void makeLocalGoal(int)
++ void makeVisitantGoal(int)
++ void setDate(Date)
++ void setLocalTeam(TeamSeason)
++ void setVisitantTeam(TeamSeason)
++ void setLocation(String)
++ void setMarkerLocal(int)
++ int getMarkerLocal()
++ void setMarkerVisitant(int)
++ int getMarkerVisitant()
++ String getResult()
++ TeamSeason getLocalTeam()
++ TeamSeason getVisitantTeam()
++ Date getCreation()
+}
+class Team {
+- String name
+- int winCounter
+- int lossCounter
+- int drawCounter
++ void setName(String)
++ String getName()
++ void incrementWinCounter()
++ int getWinCounter()
++ int getLossCounter()
++ void incrementlossCounter()
++ int getDrawCounter()
++ void incrementDrawCounter()
+}
+
+
+Team <|-- TeamSeason
+@enduml
